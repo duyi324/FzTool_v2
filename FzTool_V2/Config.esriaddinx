@@ -1,0 +1,44 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>FzTool_V2</Name>
+  <AddInID>{a571572c-6502-4c1c-96d0-67ae3ac41edd}</AddInID>
+  <Description>赋值工具第二版，可自定义界面</Description>
+  <Version>1.0.3</Version>
+  <Image>Images\FzTool_V2.png</Image>
+  <Author>Fy.L</Author>
+  <Company>Fy.L</Company>
+  <Date>2019/08/09</Date>
+  <Targets>
+    <Target name="Desktop" version="10.2" />
+  </Targets>
+  <AddIn language="CLR" library="FzTool_V2.dll" namespace="FzTool_V2">
+    <ArcMap>
+      <!--命令-->
+      <Commands>
+        <Button id="FyL_FzTool_V2_BtnFzTool" class="BtnFzTool" message="打开赋值工具v2，此版本在上一版的基础上增加了自定义地类的功能" caption="赋值工具v2" tip="赋值工具v2" category="Add-In Controls" image="Images\BtnFzTool.png" />
+      </Commands>
+      <!--工具栏-->
+      <Toolbars>
+        <Toolbar id="FyL_FzTool_V2_BarFzTool" caption="赋值工具v2" showInitially="true">
+          <Items>
+            <Item refID="FyL_FzTool_V2_BtnFzTool" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+      <!--窗口-->
+      <DockableWindows>
+        <!--<DockableWindow id="FyL_FZTool_DocWinFZ" class="DocWinFZ+AddinImpl" caption="赋值窗口 编译日期：2019/04/15" image="Images\DocWinFZ.png">
+          <InitialPlacement height="300" width="300" state="pinned" position="float" />
+        </DockableWindow>-->
+        <!--<DockableWindow id="FZTool_FrmWyDataImport" class="FZTool.Forms.FrmWyDataImport+AddinImpl" caption="三调外业数据导入 编译日期：2019/01/07" image="Images\FrmWyDataImport.png">
+          <InitialPlacement height="300" width="300" state="pinned" position="float" />
+        </DockableWindow>-->
+        <DockableWindow id="FyL_FzTool_V2_FrmFz" class="FrmFz+AddinImpl" caption="赋值工具v2 by LFY" image="Images\FrmFz.png">
+          <InitialPlacement height="300" width="300" state="pinned" position="float" />
+        </DockableWindow>
+        <DockableWindow id="FyL_FzTool_V2_FrmBz" class="FrmBz+AddinImpl" caption="字段赋值工具" image="Images\FrmBz_1.png">
+          <InitialPlacement height="100" width="200" state="pinned" position="float" />
+        </DockableWindow>
+      </DockableWindows>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
